@@ -1,0 +1,5 @@
+/etc/stove/config.xml
+/bin/pkg/BBC
+/Users/baker/recipes/database.xml
+/Users/baker/pokemon.avi
+/Users/baker/lemonade/

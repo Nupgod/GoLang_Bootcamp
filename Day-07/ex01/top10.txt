@@ -1,0 +1,14 @@
+Showing nodes accounting for 3870ms, 87.76% of 4410ms total
+Dropped 83 nodes (cum <= 22.05ms)
+Showing top 10 nodes out of 63
+      flat  flat%   sum%        cum   cum%
+    1640ms 37.19% 37.19%     2220ms 50.34%  ex01.MinCoins
+     720ms 16.33% 53.51%     1870ms 42.40%  ex01.MinCoins2
+     530ms 12.02% 65.53%      940ms 21.32%  slices.partialInsertionSortOrdered[go.shape.int]
+     430ms  9.75% 75.28%      430ms  9.75%  cmp.Less[go.shape.int] (inline)
+     170ms  3.85% 79.14%      520ms 11.79%  runtime.mallocgc
+     100ms  2.27% 81.41%      750ms 17.01%  runtime.growslice
+     100ms  2.27% 83.67%      100ms  2.27%  runtime.nextFreeFast (inline)
+      70ms  1.59% 85.26%      110ms  2.49%  runtime.scanobject
+      60ms  1.36% 86.62%       60ms  1.36%  runtime.roundupsize (inline)
+      50ms  1.13% 87.76%       50ms  1.13%  runtime.memclrNoHeapPointers

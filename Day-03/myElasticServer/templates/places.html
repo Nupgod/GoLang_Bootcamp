@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .location {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .pagination {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pagination a {
+            margin: 0 10px;
+            font-size: 1.5em;
+            text-decoration: none;
+            color: #333;
+            padding: 5px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .pagination a:hover {
+            background-color: #79046f;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Total Places: {{.Total}}</h1>
+    {{range .Places}}
+    <div class="location">
+        <h1>{{.Name}}</h1>
+        <h2>Address: {{.Address}}</h2>
+        <h2>Phone: {{.Phone}}</h2>
+    </div>
+    {{end}}
+
+    <div class="pagination">
+        {{if gt .Page 1}}
+        <a href="/?page={{sub .Page 1}}">Previous</a>
+        {{end}}
+        {{if lt .Page .LastPage}}
+        <a href="/?page={{add .Page 1}}">Next</a>
+        {{end}}
+        <a href="/?page={{.LastPage}}">Last</a>
+    </div>
+</body>
+</html>
